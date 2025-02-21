@@ -11,3 +11,8 @@ dependencies = [
     "streamlit>=1.42.2",
     "trafilatura<2.0.0"
 ]
+
+
+
+[tool.poetry]
+package-mode = false
