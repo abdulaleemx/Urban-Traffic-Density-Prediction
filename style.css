@@ -1,0 +1,257 @@
+/* Main container styling */
+.main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* Navigation bar */
+.nav-container {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Sidebar styling */
+.sidebar .sidebar-content {
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 2rem 1.5rem;
+    height: 100vh;
+}
+
+/* Header styling */
+h1 {
+    color: #2C3E50;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 2px solid #2C3E50;
+}
+
+h2 {
+    color: #2C3E50;
+    font-weight: 500;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h3 {
+    color: #2C3E50;
+    font-weight: 500;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border-left: 3px solid #2C3E50;
+}
+
+/* Card styling */
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+/* Input fields */
+.stTextInput>div>div>input,
+.stSelectbox>div>div>select,
+.stNumberInput>div>div>input {
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    padding: 0.75rem;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.stTextInput>div>div>input:focus,
+.stSelectbox>div>div>select:focus,
+.stNumberInput>div>div>input:focus {
+    border-color: #2C3E50;
+    box-shadow: 0 0 0 2px rgba(44,62,80,0.1);
+}
+
+/* Button styling */
+.stButton>button {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.stButton>button:hover {
+    background-color: #34495E;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Section containers */
+.section-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+    border: 1px solid #e0e0e0;
+}
+
+/* Data visualization container */
+.viz-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+/* Metrics display */
+.metric-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2C3E50;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #7F8C8D;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status messages */
+.stInfo, .stSuccess, .stWarning, .stError {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border-left: 4px solid;
+    width: 100%;
+}
+
+.stInfo {
+    background-color: #f8f9fa;
+    border-left-color: #2C3E50;
+}
+
+.stSuccess {
+    background-color: #f8f9fa;
+    border-left-color: #27AE60;
+}
+
+.stWarning {
+    background-color: #f8f9fa;
+    border-left-color: #F1C40F;
+}
+
+.stError {
+    background-color: #f8f9fa;
+    border-left-color: #E74C3C;
+}
+
+/* Loading animation */
+.stProgress > div > div > div {
+    background-color: #2C3E50;
+}
+
+/* Responsive design - Large devices (desktops) */
+@media (min-width: 992px) {
+    .main {
+        padding: 2rem;
+    }
+}
+
+/* Responsive design - Medium devices (tablets) */
+@media (max-width: 991px) {
+    .main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Responsive design - Small devices (phones) */
+@media (max-width: 768px) {
+    .main {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .card, .viz-container {
+        padding: 1rem;
+        margin: 0.75rem 0;
+    }
+
+    /* Stack columns on mobile */
+    .row > div[class^="col-"] {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive design - Extra small devices */
+@media (max-width: 576px) {
+    .main {
+        padding: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* File uploader styling */
+.uploadedFile {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+}
