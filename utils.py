@@ -18,7 +18,7 @@ def preprocess_data(data):
     
     if 'weather' in df.columns:
         weather_mapping = {
-            'Clear': 0, 'Rain': 1, 'Snow': 2, 'Cloudy': 3
+            'Sunny': 0, 'Rainy': 1, 'Cloudy': 2
         }
         df['weather'] = df['weather'].map(weather_mapping)
     
@@ -31,20 +31,3 @@ def preprocess_data(data):
             raise ValueError(f"Missing required column: {col}")
     
     return df
-
-def load_sample_data():
-    """
-    Load sample data for demonstration
-    """
-    np.random.seed(42)
-    n_samples = 24  # One day worth of hourly data
-    
-    sample_data = pd.DataFrame({
-        'time_of_day': range(24),
-        'day_of_week': ['Monday'] * n_samples,
-        'weather': np.random.choice(['Clear', 'Rain', 'Snow', 'Cloudy'], n_samples),
-        'temperature': np.random.normal(20, 5, n_samples),
-        'special_event': np.random.choice([True, False], n_samples, p=[0.1, 0.9])
-    })
-    
-    return sample_data

@@ -4,7 +4,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from model import TrafficModel
-from utils import preprocess_data, load_sample_data
+from utils import preprocess_data 
 
 # Page configuration
 st.set_page_config(
@@ -24,11 +24,11 @@ def show_data_format_guide():
     Your CSV file should include these columns:
     - Time of Day: (0-23) Hour of the day
     - Day of Week: Monday through Sunday
-    - Weather: Clear, Rain, Snow, or Cloudy
+    - Weather: Sunny, Rainy, or Cloudy
     - Temperature: Value in Celsius
     - Special Event: True or False
 
-    Download our sample CSV format for reference.
+
     """)
 
 def validate_data(df):
@@ -67,7 +67,7 @@ def main():
     st.sidebar.header("Prediction Controls")
     input_method = st.sidebar.radio(
         "Select Input Method",
-        ["Upload Data", "Sample Data", "Manual Input"]
+        ["Upload Data", "Manual Input"]
     )
 
     data = None
@@ -92,10 +92,10 @@ def main():
                 st.error(f"Error reading file: {str(e)}")
                 data = None
 
-    elif input_method == "Sample Data":
-        with st.spinner('Loading sample dataset...'):
-            data = load_sample_data()
-        st.success("Sample data loaded")
+    # elif input_method == "Sample Data":
+    #     with st.spinner('Loading sample dataset...'):
+    #         data = load_sample_data()
+    #     st.success("Sample data loaded")
 
     else:  # Manual Input
         st.sidebar.subheader("Parameter Input")
@@ -110,7 +110,7 @@ def main():
                 )
                 weather = st.selectbox(
                     "Weather",
-                    ['Clear', 'Rain', 'Snow', 'Cloudy'],
+                    ['Sunny', 'Rainy', 'Cloudy'],
                     help="Select weather condition"
                 )
 
