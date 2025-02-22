@@ -8,7 +8,7 @@ from utils import preprocess_data
 
 # Page configuration
 st.set_page_config(
-    page_title="Traffic Density Predictor",
+    page_title="Urban Traffic Density Predictor",
     page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded"
@@ -43,12 +43,12 @@ def validate_data(df):
 
 def main():
     # Header section
-    st.title("Traffic Density Predictor")
+    st.title("Ultimate Traffic Density Predictor")
 
     # Welcome card
     st.markdown("""
     <div class="card">
-        <h2>Welcome to the Traffic Density Prediction System</h2>
+        <h2>Traffic Density Prediction System</h2>
         <p>This advanced analytics tool helps you:</p>
         <ul>
             <li>Predict urban traffic density</li>
